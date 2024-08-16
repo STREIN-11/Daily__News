@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export class NewsItem extends Component {
     render() {
-        let{title, description, image_url, newsUrl} = this.props;
+        let{title, description, image_url, author, publishedAt, newsUrl} = this.props;
         return (
             <div className="my-3">
                 <div className="card" style={{width: "18rem"}}>
@@ -10,6 +10,8 @@ export class NewsItem extends Component {
                         <div className="card-body">
                             <h5 className="card-title">{title}</h5>
                             <p className="card-text">{description}</p>
+                            <p className="card-text">{author}</p>
+                            <p className="card-text">{publishedAt}</p>
                             <a href={newsUrl} target='_blank' className="btn btn-dark">Read More</a>
                         </div>
                 </div>
